@@ -1,0 +1,52 @@
+@import "~@/assets/scss/global.scss";
+#root {
+  padding: 0;
+}
+.start-activity {
+  @include flex($direction: column, $justify: center, $align: center);
+  background: url('../../assets/image/bg.webp') no-repeat top;
+  height: 100%;
+  .camera-icon {
+    font-size: 60px;
+    color: $white-color;
+    font-weight: bold;
+    animation: moveScale 1s;
+    animation-timing-function: linear;
+  }
+  .tip-text {
+    font-size: $f14;
+    line-height: $f21;
+    color: $white-color;
+    padding: 20px 0 30px 0;
+  }
+  .next--btn {
+    background: $red-color !important;
+    @include flex($justify: center, $align: center);
+    width: 54px;
+    height: 54px;
+    border-radius: 50%;
+    color: $white-color;
+    animation: move 1s;
+    animation-timing-function: linear;
+  }
+}
+
+@keyframes move
+{
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes moveScale
+{
+  from {
+    transform: translateX(-100%) rotate(-90deg);
+  }
+  to {
+    transform: translateX(0) rotate(0deg);
+  }
+}

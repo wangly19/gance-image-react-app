@@ -1,0 +1,53 @@
+.loginActivity {
+  height: 100%;
+  padding: 20px;
+  display: grid;
+  grid-template-rows: 88px 1fr;
+}
+
+.welcomeText {
+  animation: textScale .8s;
+  font-size: 26px;
+  font-weight: normal;
+}
+
+.loginForm {
+  @include flex($direction: column, $justify: center);
+}
+
+.formItem {
+  margin-bottom: 21px;
+  width: 300px;
+}
+
+.inputWitth {
+  width: 300px;
+  outline: none;
+  border-color: red;
+}
+
+.authCode {
+  background: $dark-color !important;
+  color: $white-color !important;
+}
+
+.LoginMain {
+  @include flex($direction: column, $align: center, $justify: space-around);
+}
+
+.submitButton {
+  background: $dark-color !important;
+  color: $white-color !important;
+  height: 55px;
+  width: 300px;
+}
+
+// 文字放大效果
+@keyframes textScale {
+  form {
+    transform: scale(-1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}

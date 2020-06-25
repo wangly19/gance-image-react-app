@@ -1,0 +1,6 @@
+.back-wrapper {
+  height: 88px;
+  @include flex($justify: flex-start, $align: center);
+  .last-icon {
+  }
+}
