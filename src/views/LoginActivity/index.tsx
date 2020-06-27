@@ -13,7 +13,9 @@ import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import { Button, Snackbar  } from '@material-ui/core';
 import { Validation } from '@/tools/util';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { faCoffee, faHdd } from '@fortawesome/free-solid-svg-icons';
+import { Link } from 'react-router-dom';
+import Storage from '@/tools/local';
 
 function Login (props: any) {
   // 登录表单
@@ -66,10 +68,8 @@ function Login (props: any) {
    * 登录
    */
   const submitLoginForm = (): void => {
-    console.log(1111);
-    console.log(errorRule);
     Validation(errorRule, (res: boolean): void => {
-      console.log(res);
+      Storage.setData<string>('token', '1')
     })
   }
 
@@ -191,9 +191,12 @@ function Login (props: any) {
             <FontAwesomeIcon icon={ faCoffee }/>
           </IconButton>
           <IconButton aria-label="close" color="inherit">
+            <FontAwesomeIcon icon={ faHdd }/>
           </IconButton>
         </div>
-        <div className="deal-link">5</div>
+        <div className="deal-link">
+          登录后，默认同意<Link to="/">用户协议</Link>
+        </div>
       </div>
     </div>
   )

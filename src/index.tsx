@@ -11,9 +11,7 @@ import * as serviceWorker from './serviceWorker';
  * 注入Service
  */
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <App />,
   document.getElementById('root')
 );
 serviceWorker.unregister();

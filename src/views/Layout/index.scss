@@ -1,0 +1,9 @@
+.layout-activity {
+  height: 100%;
+  display: grid;
+  grid-template-rows: 1fr 57px;
+  overflow-x: hidden;
+  .nav-wrapper {
+    @include flex($align: center);
+  }
+}
