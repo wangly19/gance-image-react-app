@@ -1,15 +1,16 @@
 import React from 'react';
 import './index.scss';
 import SearchBar from '@/components/SearchBar';
-import CardImage from '@/components/CardImage';
- 
+import CardItem from '@/components/CardItem';
 
 export default function HomePage() {
 
   return (
     <div className="home-wrapper">
       <SearchBar></SearchBar>
-      <CardImage/>
+      <div className="list">
+        <CardItem/>
+      </div>
     </div>
   );
 }

@@ -1,2 +1,2 @@
-import 'normalize.css'
-import 'antd/dist/antd.less';
+import 'normalize.css';
+import '@/assets/scss/reset.css';

@@ -1,7 +1,12 @@
 .home-wrapper {
-  padding: 20px;
-  height: calc(100% - 60px);
+  height: 100%;
   width: 100%;
-  @include position();
-  overflow-y: auto;
+  position: relative;
+  padding: 15px;
+  .list {
+    width: 100%;
+    padding: 0 15px 0 15px;
+    @include position($position: absolute, $top: 70px, $left: 0, $bottom: 15px);
+    overflow: auto;
+  }
 }
